@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Baixe grátis o Dicionário do Mercado Financeiro da VRTA Capital e entre na comunidade de investidores.">
+  <meta name="theme-color" content="#0A1426">
+  <title>Dicionário do Mercado Financeiro grátis | VRTA Capital</title>
+  <style>html, body { margin: 0; min-height: 100%; background: #0A1426; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+
+#vrta-landing{
+  --navy:#0A1426;
+  --panel:#12213D;
+  --line:#22324D;
+  --silver:#C9D1DC;
+  --ink:#E9EDF3;
+  --soft:#B9C3D1;
+  --muted:#8FA0B6;
+  --paper:#EEF1F6;
+  --paper-ink:#122036;
+  --amber:#E8B04B;
+  --amber-hover:#F2C163;
+  --danger:#FF8A8A;
+}
+#vrta-landing *{box-sizing:border-box;}
+#vrta-landing{
+  margin:0;background:var(--navy);color:var(--ink);
+  font-family:"Source Sans 3",Arial,Helvetica,sans-serif;
+  font-size:18px;line-height:1.5;
+}
+#vrta-landing img{max-width:100%;}
+
+#vrta-landing .page{max-width:1120px;margin:0 auto;padding:28px 20px 48px;}
+
+/* Marca */
+#vrta-landing .brand{
+  display:flex;align-items:center;gap:10px;
+  font-family:"Sora",Arial,sans-serif;font-weight:700;font-size:19px;
+  color:var(--silver);margin:0 0 40px;
+}
+#vrta-landing .brand img{height:36px;width:auto;display:block;}
+
+/* Layout principal */
+#vrta-landing .hero{
+  display:grid;gap:28px 56px;
+  grid-template-columns:1fr;
+  grid-template-areas:"intro" "card" "dict";
+}
+#vrta-landing .intro{grid-area:intro;}
+#vrta-landing .card{grid-area:card;}
+#vrta-landing .dict{grid-area:dict;}
+
+@media (min-width:900px){
+  #vrta-landing .hero{
+    grid-template-columns:1.1fr .9fr;
+    grid-template-rows:auto 1fr;
+    grid-template-areas:"intro card" "dict card";
+    align-items:start;
+  }
+  #vrta-landing .card{position:sticky;top:24px;}
+}
+
+/* Texto de abertura */
+#vrta-landing h1{
+  font-family:"Sora",Arial,sans-serif;font-weight:800;
+  font-size:clamp(29px,6.2vw,48px);line-height:1.13;letter-spacing:-0.015em;
+  color:#fff;margin:0 0 16px;
+}
+#vrta-landing .sub{
+  font-size:clamp(18px,4.2vw,21px);line-height:1.5;color:var(--soft);
+  margin:0;max-width:34em;
+}
+
+/* Prévia em formato de verbete */
+#vrta-landing .dict-box{
+  background:var(--paper);color:var(--paper-ink);
+  border-left:6px solid var(--silver);border-radius:6px;
+  padding:6px 22px;
+}
+#vrta-landing .entry{padding:16px 0;border-bottom:1px solid #D3D9E3;}
+#vrta-landing .entry:last-child{border-bottom:0;}
+#vrta-landing .term{
+  font-family:"Sora",Arial,sans-serif;font-weight:700;font-size:20px;
+  margin:0 0 4px;color:var(--navy);
+}
+#vrta-landing .term small{
+  font-family:"Source Sans 3",Arial,sans-serif;font-weight:400;font-size:15px;
+  color:#5B6B82;margin-left:8px;font-style:italic;
+}
+#vrta-landing .def{margin:0;font-size:17px;line-height:1.5;color:#2A3A52;}
+
+/* Cartão do formulário */
+#vrta-landing .card{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:28px 24px;
+}
+#vrta-landing .card h2{
+  font-family:"Sora",Arial,sans-serif;font-weight:700;
+  font-size:clamp(22px,4.6vw,26px);line-height:1.2;color:#fff;margin:0 0 8px;
+}
+#vrta-landing .card .lead{margin:0 0 22px;font-size:17px;color:var(--soft);}
+
+#vrta-landing .field{margin:0 0 16px;}
+#vrta-landing label{display:block;font-weight:600;font-size:16px;margin:0 0 6px;color:var(--ink);}
+#vrta-landing input[type=text], #vrta-landing input[type=email], #vrta-landing input[type=tel]{
+  width:100%;height:52px;padding:0 14px;
+  font:inherit;font-size:17px;color:var(--paper-ink);
+  background:#F4F6FA;border:2px solid transparent;border-radius:8px;
+}
+#vrta-landing input::placeholder{color:#7C8AA0;}
+#vrta-landing input:focus-visible, #vrta-landing .btn:focus-visible, #vrta-landing .check input:focus-visible{
+  outline:3px solid var(--amber);outline-offset:2px;
+}
+#vrta-landing input[aria-invalid=true]{border-color:var(--danger);}
+#vrta-landing .err{display:block;min-height:0;margin:6px 0 0;font-size:15px;color:var(--danger);}
+#vrta-landing .err:empty{display:none;}
+
+#vrta-landing .check{display:flex;gap:10px;align-items:flex-start;margin:4px 0 20px;}
+#vrta-landing .check input{
+  flex:none;width:22px;height:22px;margin:2px 0 0;accent-color:var(--amber);
+}
+#vrta-landing .check label{margin:0;font-weight:400;font-size:15px;line-height:1.45;color:var(--soft);}
+
+#vrta-landing .btn{
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  width:100%;min-height:56px;padding:14px 18px;
+  font-family:"Sora",Arial,sans-serif;font-weight:700;font-size:16.5px;line-height:1.25;
+  border-radius:10px;border:2px solid transparent;cursor:pointer;text-decoration:none;
+  transition:background-color .15s ease,border-color .15s ease;
+}
+#vrta-landing .btn-primary{background:var(--amber);color:var(--navy);}
+#vrta-landing .btn-primary:hover{background:var(--amber-hover);}
+#vrta-landing .btn-primary[disabled]{opacity:.7;cursor:wait;}
+#vrta-landing .btn-outline{background:transparent;color:#fff;border-color:var(--silver);}
+#vrta-landing .btn-outline:hover{background:#1A2B4A;}
+
+#vrta-landing .microcopy{margin:12px 0 0;font-size:14.5px;color:var(--muted);text-align:center;}
+#vrta-landing .form-error{margin:12px 0 0;font-size:15.5px;color:var(--danger);text-align:center;}
+#vrta-landing .form-error:empty{display:none;}
+
+/* Estado de sucesso */
+#vrta-landing .success[hidden], #vrta-landing #form[hidden]{display:none;}
+#vrta-landing .success .actions{display:grid;gap:14px;margin:22px 0 0;}
+#vrta-landing .success .note{margin:8px 0 0;font-size:15px;color:var(--muted);text-align:center;}
+#vrta-landing .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+
+/* Blocos de baixo */
+#vrta-landing .below{
+  display:grid;gap:36px 56px;grid-template-columns:1fr;
+  margin:56px 0 0;padding:40px 0 0;border-top:1px solid var(--line);
+}
+@media (min-width:900px){#vrta-landing .below{grid-template-columns:1.1fr .9fr;}}
+#vrta-landing h3{
+  font-family:"Sora",Arial,sans-serif;font-weight:700;
+  font-size:clamp(22px,4.6vw,28px);line-height:1.2;color:#fff;margin:0 0 18px;
+}
+#vrta-landing .list{list-style:none;margin:0;padding:0;}
+#vrta-landing .list li{position:relative;padding:0 0 14px 34px;font-size:18px;line-height:1.45;color:#D5DCE6;}
+#vrta-landing .list li::before{
+  content:"";position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:var(--silver);
+}
+#vrta-landing .list li::after{
+  content:"";position:absolute;left:7px;top:8px;width:5px;height:10px;
+  border:solid var(--navy);border-width:0 2.5px 2.5px 0;transform:rotate(45deg);
+}
+#vrta-landing .for p{margin:0;font-size:18px;line-height:1.55;color:#D5DCE6;}
+
+#vrta-landing .legal{
+  margin:48px 0 0;padding:20px 0 0;border-top:1px solid var(--line);
+  font-size:13.5px;line-height:1.55;color:#7F8FA6;
+}
+#vrta-landing .legal p{margin:0 0 8px;}
+
+@media (max-width:420px){
+  #vrta-landing .page{padding:22px 16px 40px;}
+  #vrta-landing .card{padding:24px 18px;}
+  #vrta-landing .brand{margin-bottom:30px;}
+}
+@media (prefers-reduced-motion:reduce){
+  #vrta-landing .btn{transition:none;}
+}
+
+</style>
+</head>
+<body>
+<div id="vrta-landing">
+<div class="page">
+<!-- Para usar a logo, troque o link abaixo e remova as marcas de comentário -->
+<div class="brand">
+<!-- <img src="logo.png" alt="VRTA Capital"> -->
+<span>VRTA Capital</span>
+</div>
+<main>
+<div class="hero">
+<div class="intro">
+<h1>Selic, CDI, IPCA: entenda de vez os termos que ninguém te explica.</h1>
+<p class="sub">Baixe grátis o Dicionário do Mercado Financeiro e entre na comunidade de investidores da VRTA Capital. As siglas e expressões mais usadas, explicadas em linguagem simples.</p>
+</div>
+<!-- Cartão: formulário (antes) e botões liberados (depois) -->
+<section aria-labelledby="titulo-form" class="card">
+<form id="form" novalidate="">
+<h2 id="titulo-form">Receba o dicionário grátis</h2>
+<p class="lead">Preencha seus dados para liberar o download e o acesso à comunidade.</p>
+<div class="field">
+<label for="nome">Nome</label>
+<input aria-describedby="erro-nome" autocomplete="given-name" id="nome" name="nome" placeholder="Como você se chama?" required="" type="text"/>
+<span aria-live="polite" class="err" id="erro-nome"></span>
+</div>
+<div class="field">
+<label for="email">E-mail</label>
+<input aria-describedby="erro-email" autocomplete="email" id="email" inputmode="email" name="email" placeholder="seuemail@exemplo.com" required="" type="email"/>
+<span aria-live="polite" class="err" id="erro-email"></span>
+</div>
+<div class="field">
+<label for="telefone">Telefone com WhatsApp</label>
+<input aria-describedby="erro-telefone" autocomplete="tel-national" id="telefone" inputmode="tel" name="telefone" placeholder="(11) 91234-5678" required="" type="tel"/>
+<span aria-live="polite" class="err" id="erro-telefone"></span>
+</div>
+<!-- Campo-armadilha contra robôs: deve ficar vazio -->
+<div aria-hidden="true" class="hp">
+<label for="site">Não preencha este campo</label>
+<input autocomplete="off" id="site" name="site" tabindex="-1" type="text"/>
+</div>
+<div class="check">
+<input aria-describedby="erro-aceite" id="aceite" name="aceite" type="checkbox"/>
+<label for="aceite">Concordo em receber o material e conteúdos educacionais da VRTA Capital por e-mail, WhatsApp e Telegram.</label>
+</div>
+<span aria-live="polite" class="err" id="erro-aceite" style="margin:-12px 0 16px;"></span>
+<button class="btn btn-primary" id="enviar" type="submit">Liberar meu dicionário grátis</button>
+<p class="form-error" id="erro-geral" role="alert"></p>
+<p class="microcopy">Sem spam. Seus dados não são compartilhados.</p>
+</form>
+<div class="success" hidden="" id="sucesso">
+<h2 id="titulo-sucesso">Pronto! Seu material está liberado.</h2>
+<p class="lead" style="margin-bottom:0;">Escolha como quer acessar:</p>
+<div class="actions">
+<a class="btn btn-primary" data-acao="baixou_ebook" href="#" id="btn-ebook" rel="noopener" target="_blank">Baixar o dicionário (PDF)</a>
+<a class="btn btn-outline" data-acao="entrou_telegram" href="#" id="btn-telegram" rel="noopener" target="_blank">Entrar na comunidade de investidores no Telegram</a>
+</div>
+<p class="note">Na comunidade você também recebe o dicionário e conteúdo exclusivo gratuito.</p>
+</div>
+</section>
+<!-- Prévia: edite para ficar igual ao seu ebook -->
+<div aria-label="Prévia do conteúdo do dicionário" class="dict">
+<div class="dict-box">
+<div class="entry">
+<p class="term">Selic <small>sigla</small></p>
+<p class="def">A taxa básica de juros da economia brasileira, definida pelo Banco Central.</p>
+</div>
+<div class="entry">
+<p class="term">CDI <small>sigla</small></p>
+<p class="def">Taxa de referência que acompanha a Selic e serve de parâmetro para investimentos de renda fixa.</p>
+</div>
+<div class="entry">
+<p class="term">IPCA <small>sigla</small></p>
+<p class="def">O índice oficial de inflação do Brasil, medido pelo IBGE.</p>
+</div>
+</div>
+</div>
+</div>
+<section class="below">
+<div>
+<h3>O que você vai encontrar no dicionário</h3>
+<ul class="list">
+<li>Os termos que aparecem em notícias e corretoras, traduzidos sem economês</li>
+<li>Siglas e expressões organizadas para consulta rápida</li>
+<li>Material feito para quem está começando do zero</li>
+<li>100% gratuito, com acesso na hora</li>
+</ul>
+</div>
+<div class="for">
+<h3>Para quem é</h3>
+<p>Se você já ouviu falar em Selic, CDI ou renda fixa e ficou com vergonha de perguntar o que significa, esse material é para você.</p>
+</div>
+</section>
+</main>
+<footer class="legal">
+<p>Este material tem caráter exclusivamente educacional e não constitui recomendação de investimento. Rentabilidade passada não garante resultados futuros.</p>
+<p>Seus dados são usados apenas para o envio do material e de conteúdos da VRTA Capital, conforme a LGPD.</p>
+<p>© VRTA Capital</p>
+</footer>
+</div>
+</div>
+
+<script>
+/* Configuração do site independente VRTA Capital */
+var CONFIG = {
+  // Link do Google Apps Script que grava os cadastros na sua planilha
+  SHEETS_URL: "https://script.google.com/macros/s/AKfycbwoLdMvtINTZQD2S2GLVebyGT_XaLrZIuqQzed7xB-tYYHxZ54DFNvOwG2fIb749gDqmQ/exec",
+  // Link compartilhado do PDF no Adobe Acrobat
+  EBOOK_URL: "https://acrobat.adobe.com/id/urn:aaid:sc:US:b0894c4b-2921-4234-bcdb-d1c466c4f0cc",
+  // Link de convite do seu grupo/canal do Telegram (ex.: https://t.me/+xxxxxxxx)
+  TELEGRAM_URL: "https://t.me/+BONFbLgTXRBlNDVh"
+};
+
+(function () {
+  var form = document.getElementById("form");
+  var sucesso = document.getElementById("sucesso");
+  var btnEnviar = document.getElementById("enviar");
+  var erroGeral = document.getElementById("erro-geral");
+  var campos = {
+    nome: document.getElementById("nome"),
+    email: document.getElementById("email"),
+    telefone: document.getElementById("telefone"),
+    aceite: document.getElementById("aceite")
+  };
+  var erros = {
+    nome: document.getElementById("erro-nome"),
+    email: document.getElementById("erro-email"),
+    telefone: document.getElementById("erro-telefone"),
+    aceite: document.getElementById("erro-aceite")
+  };
+  var lead = null;
+
+  var btnEbook = document.getElementById("btn-ebook");
+  var btnTelegram = document.getElementById("btn-telegram");
+  btnEbook.href = CONFIG.EBOOK_URL || "#";
+  btnTelegram.href = CONFIG.TELEGRAM_URL || "#";
+
+  if (!CONFIG.EBOOK_URL) {
+    btnEbook.addEventListener("click", function (e) {
+      e.preventDefault();
+      alert("O link do PDF ainda não foi configurado. Adicione o endereço público do dicionário em EBOOK_URL no código.");
+    });
+  }
+
+  /* Máscara de telefone brasileiro: (11) 91234-5678 */
+  campos.telefone.addEventListener("input", function () {
+    var d = this.value.replace(/\D/g, "").slice(0, 11);
+    var out = d;
+    if (d.length > 10) out = "(" + d.slice(0, 2) + ") " + d.slice(2, 7) + "-" + d.slice(7);
+    else if (d.length > 6) out = "(" + d.slice(0, 2) + ") " + d.slice(2, 6) + "-" + d.slice(6);
+    else if (d.length > 2) out = "(" + d.slice(0, 2) + ") " + d.slice(2);
+    else if (d.length > 0) out = "(" + d;
+    this.value = out;
+  });
+
+  function setErro(chave, msg) {
+    erros[chave].textContent = msg || "";
+    if (campos[chave].type !== "checkbox") {
+      campos[chave].setAttribute("aria-invalid", msg ? "true" : "false");
+    }
+  }
+
+  function validar() {
+    var ok = true, primeiro = null;
+    var nome = campos.nome.value.trim();
+    var email = campos.email.value.trim();
+    var tel = campos.telefone.value.replace(/\D/g, "");
+
+    if (nome.length < 2) { setErro("nome", "Digite seu nome."); ok = false; primeiro = primeiro || campos.nome; } else setErro("nome");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { setErro("email", "Digite um e-mail válido, como nome@exemplo.com."); ok = false; primeiro = primeiro || campos.email; } else setErro("email");
+    if (tel.length < 10 || tel.length > 11) { setErro("telefone", "Digite o telefone com DDD, por exemplo (11) 91234-5678."); ok = false; primeiro = primeiro || campos.telefone; } else setErro("telefone");
+    if (!campos.aceite.checked) { setErro("aceite", "Marque a caixa para receber o material."); ok = false; primeiro = primeiro || campos.aceite; } else setErro("aceite");
+
+    if (primeiro) primeiro.focus();
+    return ok;
+  }
+
+  function enviar(dados, opcoes) {
+    if (!CONFIG.SHEETS_URL) {
+      return Promise.reject(new Error("SHEETS_URL não configurado."));
+    }
+    var corpo = new URLSearchParams(dados);
+    var init = { method: "POST", mode: "no-cors", body: corpo };
+    if (opcoes && opcoes.keepalive) init.keepalive = true;
+    return fetch(CONFIG.SHEETS_URL, init);
+  }
+
+  function dadosDoLead(acao) {
+    return {
+      acao: acao,
+      nome: lead.nome,
+      email: lead.email,
+      telefone: lead.telefone,
+      origem: document.referrer || "direto",
+      pagina: location.href
+    };
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    erroGeral.textContent = "";
+    if (!validar()) return;
+
+    lead = {
+      nome: campos.nome.value.trim(),
+      email: campos.email.value.trim(),
+      telefone: campos.telefone.value.trim()
+    };
+
+    function mostrarSucesso() {
+      document.getElementById("titulo-sucesso").textContent = "Pronto, " + lead.nome.split(" ")[0] + "! Seu material está liberado.";
+      form.hidden = true;
+      sucesso.hidden = false;
+      document.getElementById("titulo-sucesso").setAttribute("tabindex", "-1");
+      document.getElementById("titulo-sucesso").focus();
+    }
+
+    /* Se o campo-armadilha foi preenchido, é robô: finge sucesso e não grava */
+    if (document.getElementById("site").value) { mostrarSucesso(); return; }
+
+    btnEnviar.disabled = true;
+    btnEnviar.textContent = "Preparando seu material...";
+
+    /* Envia o cadastro para o Google Apps Script antes de liberar os links. */
+    if (!CONFIG.SHEETS_URL) {
+      console.warn("VRTA: SHEETS_URL não configurado. Os botões serão liberados, mas o cadastro não será salvo.");
+      mostrarSucesso();
+      return;
+    }
+
+    enviar(dadosDoLead("cadastro"))
+      .then(mostrarSucesso)
+      .catch(function () {
+        btnEnviar.disabled = false;
+        btnEnviar.textContent = "Liberar meu dicionário grátis";
+        erroGeral.textContent = "Não conseguimos enviar seus dados. Verifique sua conexão e tente de novo.";
+      });
+  });
+
+  /* Registra qual botão a pessoa clicou (baixou ebook / entrou no Telegram) */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-acao]"), function (a) {
+    a.addEventListener("click", function () {
+      if (lead) enviar(dadosDoLead(a.getAttribute("data-acao")), { keepalive: true });
+    });
+  });
+})();
+</script>
+</body>
+</html>
